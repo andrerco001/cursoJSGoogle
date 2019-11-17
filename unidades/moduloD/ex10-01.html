@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Descobrir a nacionalidade</title>
+
+    <!-- CSS -->
+    <style>
+        body{
+            background: rgba(154, 184, 240, 0.884);
+            font: normal 15pt Arial;
+            padding: 5%;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML -->
+    <h1>Descobrir a nacionalidade</h1>
+    <p>Você vive em qual país:</p>
+    
+    <select name="pais" id="pais" onclick="mostarNacionalidade()">
+            <option value=""></option>
+        <option value="brasil">Brasil</option>
+        <option value="eua">EUA</option>
+        <option value="franca">Franca</option>
+        <option value="inglaterra">Inglaterra</option>
+        <option value="canada">Canada</option>
+    </select>
+    <div id="res">Resultado da pesquisa</div>
+
+    <!-- JS -->
+    <script>
+        var op = window.document.querySelector('option');
+        // alert(op.value);
+        var res = window.document.querySelector('div#res');
+        res.innerHTML = op.value;
+        
+        function mostarNacionalidade(){
+            if(res == 'Brasil'){
+                res.innerHTML = 'Você é brasileiro'; 
+            } else if (res == 'EUA'){
+                res.innerHTML = 'Você é Estado Unidense'; 
+            }
+        }
+    </script>
+    
+</body>
+</html>
